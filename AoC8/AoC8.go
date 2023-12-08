@@ -125,7 +125,6 @@ func Sol1(m Map) int {
 
 func Sol2(m Map) int {
 	var curNodes []Node
-	var cycles []Cycle
 	var cycleLens []int
 
 	for _, v := range m.Nodes {
@@ -136,7 +135,6 @@ func Sol2(m Map) int {
 
 	for _, v := range curNodes {
 		cycle := DetectCycle(v, m)
-		cycles = append(cycles, cycle)
 		cycleLens = append(cycleLens, cycle.Length)
 	}
 
